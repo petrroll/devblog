@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <main id="main" role="main" class="container" aria-label="Content">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+
+
+    {% include analytics.html %}
+  </body>
+</html>

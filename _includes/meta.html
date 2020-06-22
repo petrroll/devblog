@@ -1,0 +1,31 @@
+   
+    <meta charset="utf-8" />
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <!-- for Google -->
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+    <meta name="author" content="{{ page.author | default: site.author | escape }}" />
+    <meta name="application-name" content="blog" />
+
+    <!-- for Facebook -->          
+    <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
+    <meta property="og:type" content="article" />
+    <!--<meta property="og:image" content="http://petrroll.cz/profil.png" />-->
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+
+    <!-- for Twitter -->          
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
+    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+    <!--<meta name="twitter:image" content="http://petrroll.cz/profil.png" />-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }} - {{ site.subtitle| escape }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <link rel="shortcut icon" href="{{ site.favicon }}">
+

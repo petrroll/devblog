@@ -1,0 +1,71 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Petr Houška's devblog
+subtitle: Peculiar student's tales about technology
+
+avatar: https://petrroll.cz/profil.png
+favicon: "https://petrroll.cz/favicon.ico"
+
+description: Blog of a human being from Europe.
+
+email: houskape@gmail.com
+author: Petr Houška
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://devblog.petrroll.cz" # the base hostname & protocol for your site
+permalink: /:title/
+
+google_analytics: "UA-82805083-2"
+disqus: "petrroll-devblog"
+personalurl: "https://petrroll.cz"
+
+footer-links:
+  dribbble:
+  email: houskape@gmail.com
+  facebook: houskape
+  flickr:
+  github: petrroll
+  instagram: petrroll
+  linkedin: houskape
+  pinterest:
+  rss: activate# just type anything here for a working RSS icon
+  twitter: petrroll
+  stackoverflow: #users/915609/petrroll # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+
+###
+# Build stuff
+###
+
+# Build settings
+markdown: kramdown
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CNAME
+
+###
+# Categories
+###
