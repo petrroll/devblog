@@ -3,6 +3,7 @@ layout: post
 title:  "Managed personal VPN between your devices through Azure"
 date:   2020-06-28 20:52:27 +0200
 author: Petr Houška
+categories: misc
 ---
 
 Let's say you have a few Windows devices, for example, a powerful desktop and laptop. You mostly work on the desktop but when being remote on the laptop you want to be able to remote to the desktop and harvest it's power / avoid having to sync data. 

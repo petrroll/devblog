@@ -1,0 +1,29 @@
+<div class="archive-group">
+    <div id="#{{ category_name | slugize }}"></div>
+    <p></p>
+    <h2 class="category-head">{{ category_name | capitalize }}</h2>
+    <a name="{{ category_name | slugize }}"></a>
+    {{category_desc}}
+    {% capture curr_date %}first-entry{% endcapture %}
+    <div class="group-year">
+      <ul>
+      {% for post in site.categories[category_name] %}
+        {% capture post_date %}{{ post.date | date: "%b, %Y" }}{% endcapture %}
+        {% unless curr_date == post_date %}
+          {% unless curr_date == "first-entry" %}
+            </ul></li>{% comment %} End for previous date's list {% endcomment %}
+          {% endunless %}
+          {% assign curr_date = post_date %}
+          <li>{{ curr_date }}</li>
+          <li style="list-style-type:none"><ul>{% comment %} Beginning of new date's list {% endcomment %}
+        {% endunless %}
+        <li>
+          <div class="archive-item">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+          </div>  
+        </li>
+      {% endfor %}
+    </ul></li> {% comment %} End for last date's list {% endcomment %}
+    </ul>
+    </div>
+  </div>

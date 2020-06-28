@@ -3,6 +3,7 @@ layout: post
 title:  "Gated linear networks"
 date:   2020-06-22 22:16:03 +0200
 author: Petr Houška
+categories: papers
 ---
 
 > This post if from a series of notes written for personal usage while reading random ML/SWE/CS papers. The notes weren't originally intended for the eyes of other people and therefore might be incomprehensible and/or flat out wrong.
