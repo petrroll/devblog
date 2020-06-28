@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 0.5em 0 0.1em;
   padding: 0;
 
   @include mobile {
@@ -255,7 +255,7 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
+    margin: .8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
