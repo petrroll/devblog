@@ -4,6 +4,7 @@ title:  "Async in C#, .NET, and Unity: Allocation and state machine builders"
 date:   2020-07-07 02:23:11 +0200
 author: Petr Houška
 categories: misc
+truncate: 3600
 ---
 
 While helping with [little something](https://twitter.com/OndraPaska/status/1280192030463995908) that uses Unity I came across the rabbit hole `async`/`await` support is in Unity. Historically Unity used `generators` (known as [coroutines](https://docs.unity3d.com/Manual/Coroutines.html) in Unity's world) to support async/multiple-frames-spanning computation. In 2017 they added initial support for `async`/`await` but without any meaningful libraries support and with potential performance pitfalls (hello GC, how are you?). To be fair, at that time async had performance implications even in mainland .NET (Core), mainly around allocations which - (un)fortunately aren't anywhere as problematic for (mostly) throughput oriented .NET Core apps as they can be for near-real-time applications like Unity games.

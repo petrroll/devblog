@@ -10,7 +10,13 @@ layout: default
       {% include post-categories.html %}
 
       <div class="entry">
-        {{ post.content | truncate: 3750 }}
+        {% if post.truncate %}
+          {% assign trunc = post.truncate | plus: 0 %}
+          {{ post.content | truncate: trunc }}
+        {% else %}
+          {{ post.content }}
+        {% endif %}
+
       </div>
 
       <div class="date">
