@@ -15,7 +15,9 @@ I'll assume some (relatively deep) knowledge about `async`/`await`. If you're no
 ### State machine rewrite:
 
 When you write an `async` method, [Roslyn](https://github.com/dotnet/roslyn) will rewrite it to a method that does following. As this rewrite is done by the compiler it will happen regardless of your runtime, be it full framework, .NET Core 2.1, or Unity. 
-- Compiler [synthesizes](https://sharplab.io/#v2:EYLgtghgzgLgpgJwDQBMQGoA+ABATARgFgAobABgAJt8BWAbhJOwGYrcKBhCgbxIv6qtsADioA2ADwBLAHYwAfBQCyACgCUPPgO3YAnOIB0ATSlwANinUNi2nfl0qARPkdrrtgXsMnzlt1o8A22wAdgp8dwEAXxIooA=) an `IAsyncStateMachine` struct containing the original implementation of the method cut into a state machine (as its `MoveNext(..)` method) and locals lifted as fields.
+
+{:start="0"}
+0. Compiler [synthesizes](https://sharplab.io/#v2:EYLgtghgzgLgpgJwDQBMQGoA+ABATARgFgAobABgAJt8BWAbhJOwGYrcKBhCgbxIv6qtsADioA2ADwBLAHYwAfBQCyACgCUPPgO3YAnOIB0ATSlwANinUNi2nfl0qARPkdrrtgXsMnzlt1o8A22wAdgp8dwEAXxIooA=) an `IAsyncStateMachine` struct containing the original implementation of the method cut into a state machine (as its `MoveNext(..)` method) and locals lifted as fields.
 1. Compiler generated `IAsyncStateMachine` struct is initialized (`stateMachine`) with:
 	- `This` pointer.
 	- Parameters.
