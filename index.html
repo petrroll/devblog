@@ -10,7 +10,7 @@ layout: default
       {% include post-categories.html %}
 
       <div class="entry">
-        {{ post.content }}
+        {{ post.content | truncate: 3750 }}
       </div>
 
       <div class="date">
