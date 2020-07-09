@@ -8,7 +8,7 @@ truncate: 3100
 ---
 While helping with [little something](https://twitter.com/OndraPaska/status/1280192030463995908) that uses Unity I came across another interesting thing. If you try to use normal `UnityEngine.Assertions.*` in your [Burst jobs](https://docs.unity3d.com/Packages/com.unity.burst@1.3/manual/index.html) you'll find out they're (as of Burst `1.3.3` and Unity `2020.1.0b9`) being silently optimized away and are not checked, not even in debug Builds. 
 
-A quick google search for `unity burst assert` will yield you [this amazing blog-post](https://jacksondunstan.com/articles/5484) about making your own asserts that work well with Burst. I encourage everyone to read it. Unfortunately, there's one small deficiency with the code suggested, it doesn't allow custom assertion-failed messages.  
+A quick google search for `unity burst assert` will yield you [this amazing blog-post](https://jacksondunstan.com/articles/5292) about making your own asserts that work well with Burst. I encourage everyone to read it. Unfortunately, there's one small deficiency with the code suggested, it doesn't allow custom assertion-failed messages.  
 
 ### No log message:
 
