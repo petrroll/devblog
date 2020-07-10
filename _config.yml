@@ -66,3 +66,5 @@ exclude:
   - README.md
   - CNAME
 
+collections:
+  - posts_category_info

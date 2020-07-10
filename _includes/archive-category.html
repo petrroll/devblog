@@ -1,13 +1,14 @@
+{% comment %} Assumes `category_info` variable containing `.name` and `.description`. {% endcomment %}
 <div class="archive-group">
-    <div id="#{{ category_name | slugize }}"></div>
+    <div id="#{{ category_info.name | slugize }}"></div>
     <p></p>
-    <h2 class="category-head">{{ category_name | capitalize }}</h2>
-    <a name="{{ category_name | slugize }}"></a>
-    {{category_desc}}
+    <h2 class="category-head">{{ category_info.name | capitalize }}</h2>
+    <a name="{{ category_info.name | slugize }}"></a>
+    {{category_info.description}}
     {% capture curr_date %}first-entry{% endcapture %}
     <div class="group-year">
       <ul>
-      {% for post in site.categories[category_name] %}
+      {% for post in site.categories[category_info.name] %}
         {% capture post_date %}{{ post.date | date: "%b, %Y" }}{% endcapture %}
         {% unless curr_date == post_date %}
           {% unless curr_date == "first-entry" %}
