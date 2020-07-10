@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  #title
-date:   #date
+title:  #title#
+date:   #date#
 author: Petr Houška
-categories: #categories
+categories: #categories#
 #truncate: 3600
 ---	
 

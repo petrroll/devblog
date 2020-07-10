@@ -1,6 +1,6 @@
 ---
-date:   #date
+date:   #date#
 author: Petr Houška
-category: #category
+category: #category#
 ---	
-[#title](#link)
+[#title#](#link#)
