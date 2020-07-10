@@ -68,3 +68,4 @@ exclude:
 
 collections:
   - posts_category_info
+  - til

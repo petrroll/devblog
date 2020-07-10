@@ -1,0 +1,23 @@
+---
+layout: page
+permalink: /til/
+title: TIL
+---
+
+Collection of links to random stuff I found interesting at some point.
+
+<div id="TIL">
+  {% assign til_categories = site.til | map: "category" | uniq %}
+  {% for til_category in til_categories %}
+    <h2 class="category-head">{{ til_category | capitalize }}</h2>
+    <ul>
+    {% for til in site.til %}
+      {% if til.category == til_category %}
+        <li>{{til.content | remove: '<p>' | remove: '</p>' }} - <span class="date"><time datetime="{{ til.date | date_to_xmlschema }}" itemprop="datePublished">{{ til.date | date: "%b %-d, %Y" }}</time></span></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
+
+<!--Inspired by: https://til.simonwillison.net/-->
