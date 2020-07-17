@@ -168,7 +168,7 @@ function create_til_handler {
           echo "Usage: $0 $command :c:t:n:l:h"
           echo "  -c <category>     | TIL category   | default: 'misc'."
           echo "  -t <title>        | TIL link text  | default: 'New TIL'."
-          echo "  -l <title>        | TIL link URL   | default: 'https://petrroll.cz'."
+          echo "  -l <link>         | TIL link URL   | default: 'https://petrroll.cz'."
           echo "  -n <filename>     | TIL filename   | default:  normalized <title>."
           exit 0
           ;;
