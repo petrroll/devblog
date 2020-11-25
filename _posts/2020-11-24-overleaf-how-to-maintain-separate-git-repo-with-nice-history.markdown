@@ -35,7 +35,7 @@ You can have a separate local branch `ol` that tracks overleaf's `master`, only 
     - `git checkout master`
     - `git cherry-pick <commit-from>..<commit-to> # The range of commits transferred is in the first line of git pull/push output e.g.: bb22cee..fb4a3df.`
 6. Rewrite the `cherry-pick`-ed commits on `master` with commits of your choosing. Alternatively, replace this step with [interactive rebase](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
-    - `git reset <commit-from>~1 # Resets just before the first cherry-picked commit, e.g.: bb22cee~1.`
+    - `git reset <oldest-cherry-picked-commit>~1 # Resets just before the first cherry-picked commit. Use the hash reported by cherry-pick on master, not by pull/push on ol (otherwise it resets to commit in master (different hash) -> merge).`
     - `git add . && git commit -m "My nice commit msg"`
 7. Push local `master` to `origin` (or any other remote) with its perfectly tidy git log.
 
