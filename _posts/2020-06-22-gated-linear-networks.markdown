@@ -19,7 +19,7 @@ Paper in question: [1910.01526](https://arxiv.org/abs/1910.01526)
 	- Weights adjusted during training, only the one weight vector for current input
 - Context function: 
 	- Usually set of half-space functions (similarity with side inf)
-	- Don't change during training, need to be sample correctly
+	- Don't change during training, need to be sampled correctly
 	- Similar data will (through context func.) force same weights for neurons -> sim. outputs
 	- Unsimilar data won't use the same weights -> less forgetting 
 - Each neuron is geometric mixture of outputs of previous layer (through weights)
