@@ -69,3 +69,8 @@ exclude:
 collections:
   - posts_category_info
   - til
+
+feed:
+  collections:
+    - til
+
