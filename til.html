@@ -7,7 +7,7 @@ title: TIL
 Collection of links to random stuff I found interesting at some point.
 
 <div id="TIL">
-  {% assign til_categories = site.til | map: "category" | uniq %}
+  {% assign til_categories = site.til | map: "category" | uniq | sort %}
   {% for til_category in til_categories %}
     <h2 class="category-head">{{ til_category | capitalize }}</h2>
     <ul>
