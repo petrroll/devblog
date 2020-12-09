@@ -3,7 +3,7 @@ layout: post
 title:  Scaffolding jekyll posts with little bit of bash
 date:   2020-07-10 20:40:51 +0200
 author: Petr Houška
-categories: misc
+categories: swe
 truncate: 2000
 ---	
 

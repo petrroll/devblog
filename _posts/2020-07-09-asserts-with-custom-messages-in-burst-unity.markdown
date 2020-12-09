@@ -3,7 +3,7 @@ layout: post
 title:  "Asserts with custom messages in Burst Unity"
 date:   2020-07-09 10:43:26 +0200
 author: Petr Houška
-categories: misc
+categories: swe
 truncate: 3100
 ---
 While helping with [little something](https://twitter.com/OndraPaska/status/1280192030463995908) that uses Unity I came across another interesting thing. If you try to use normal `UnityEngine.Assertions.*` in your [Burst jobs](https://docs.unity3d.com/Packages/com.unity.burst@1.3/manual/index.html) you'll find out they're (as of Burst `1.3.3` and Unity `2020.1.0b9`) being silently optimized away and are not checked, not even in debug Builds. 

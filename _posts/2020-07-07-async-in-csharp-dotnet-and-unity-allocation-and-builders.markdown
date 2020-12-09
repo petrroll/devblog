@@ -3,7 +3,7 @@ layout: post
 title:  "Async in C#, .NET, and Unity: Allocation and state machine builders"
 date:   2020-07-07 02:23:11 +0200
 author: Petr Houška
-categories: misc
+categories: swe
 truncate: 3600
 ---
 
