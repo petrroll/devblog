@@ -16,7 +16,7 @@ Paper in question: [1910.01526](https://arxiv.org/abs/1910.01526)
 	- Specific  weight vector selected via context func. from input (side information)  
 	- Each neuron different set of weights, different context function
 	- Same side information for all neurons in all layers
-	- Weights adjusted during training, only the one weight vector for current input, online gradient descent
+	- Weights adjusted during training, only the one weight vector for any specific input, online gradient descent
 - Context function: 
 	- Usually set of half-space functions (similarity with side inf)
 	- Don't change during training, need to be sampled correctly
@@ -24,7 +24,6 @@ Paper in question: [1910.01526](https://arxiv.org/abs/1910.01526)
 	- Unsimilar data won't use the same weights -> less forgetting 
 - Each neuron is geometric mixture of outputs of previous layer (through weights)
 	- Weights initialized randomly, updated via training
-
 - Essentially a multilevel mixture of KNN and linear transformation with point non-lin.
 
 	
