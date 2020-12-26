@@ -6,3 +6,7 @@ install:
 
 build:
 	bundle exec jekyll build
+
+prereqs:
+	apt-get install ruby ruby-dev zlib1g-dev
+	gem install bundler
