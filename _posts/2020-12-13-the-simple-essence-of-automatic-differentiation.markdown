@@ -4,7 +4,7 @@ title:  "The Simple Essence of Automatic Differentiation"
 date:   2020-12-13 17:05:37 +0100
 author: Petr Houška
 categories: papers
-truncate: 2600
+truncate: 2540
 ---
 
 > This post if from a series of notes written for personal usage while reading random ML/SWE/CS papers/lectures. The notes weren't originally intended for the eyes of other people and therefore might be incomprehensible and/or flat out wrong. These notes might be especially ish as my knowledge of both category theory and lambda calculus is relatively limited.
