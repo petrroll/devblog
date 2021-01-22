@@ -47,7 +47,7 @@ function create_new_item_from_template {  # (type, title, ?filename) -> file_pat
 
   # Copy template, fill it in
   cat ${folder}/_template.markdown > ${path}
-  sed -i "s/#title#/${title}/g" ${path}
+  sed -i "s/#title#/${title//\//\\\/}/g" ${path}
   sed -i "s/#date#/${date_precise}/g" ${path}
 
   return_value="${path}"
