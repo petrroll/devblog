@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deep learning notes 05: unsupervised vision with GLOM"
+title:  "Deep learning notes 05: unsupervised vision with DINO"
 date:   2021-05-11 21:50:44 +0200
 author: Petr Houška
 categories: papers
