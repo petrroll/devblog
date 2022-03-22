@@ -9,7 +9,7 @@ categories: papers
 
 > This post if from a series of quick notes written primarily for personal usage while reading random ML/SWE/CS papers. As such they might be incomprehensible and/or flat out wrong.
 
-[Deep Networks Are Kernel Machines](https://www.youtube.com/watch?v=ahRPdiCop3E) 
+### [Deep Networks Are Kernel Machines](https://www.youtube.com/watch?v=ahRPdiCop3E) 
 - Deep learning success is attributed to automatic discovery of new data representation
 - Paper's proposal: 
   - Deep learning training: stores training data
@@ -39,7 +39,7 @@ categories: papers
     - …some normalization, … 
   - Notes: `ai`, `b` depends on `x,` also connects to boosting, generally another way of looking at DNNs
 
-[Kernels!](https://www.youtube.com/watch?v=y_RjsDHl5Y4)
+### [Kernels!](https://www.youtube.com/watch?v=y_RjsDHl5Y4)
 - Refresher on concepts:
   - Kernel functions: symmetric, positive semi-definitive ~ similarity measure
   - Kernel matrix (e.g. gram matrix): pairwise distances of all points in dataset

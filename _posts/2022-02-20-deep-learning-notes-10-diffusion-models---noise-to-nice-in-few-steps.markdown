@@ -8,7 +8,7 @@ categories: papers
 ---  
 > This post if from a series of quick notes written primarily for personal usage while reading random ML/SWE/CS papers. As such they might be incomprehensible and/or flat out wrong.
 
-[DDPM - Diffusion Models Beat GANs on Image Synthesis](https://www.youtube.com/watch?v=W-O7AZNzbzQ)
+### [DDPM - Diffusion Models Beat GANs on Image Synthesis](https://www.youtube.com/watch?v=W-O7AZNzbzQ)
 - Input + sampled little bit of noise; repeated multiple times (~1000s) -> pure noise
   - `x_0 = x`; `noise(x_t+1|x_t)`; process input image from data distr.: `x`, applied `noise(…)` multiple times -> image of noise 
 - If we could invert this process -> generative model: random normal noise image -> original image
@@ -38,7 +38,7 @@ categories: papers
 - Idea: Have GANs that have multiple discriminators along the path from noise to final image ~ merge these two approaches
 
 
-[Autoregressive Diffusion Models](https://www.youtube.com/watch?v=2h4tRsQzipQ)
+### [Autoregressive Diffusion Models](https://www.youtube.com/watch?v=2h4tRsQzipQ)
 - New type of auto-regressive models: variables can be decoded in arbitrary order
 - Autoregressive models: produces tokens (words/patches/pixels) one after another
   - E.g. First word, based on priming with it a second word, based on first two a third, …
