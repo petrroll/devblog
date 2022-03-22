@@ -30,14 +30,18 @@ categories: papers
     - Classify by whichever training datapoints had similar effect on the network (sensitivity) over the course of training
     - Get output of initial model and accumulate differences made by each GD step -> output of final
   - Proof datapoint `x`, its classification `y`, training datapoints `xi -> yi`, weights `wj`, loss `L`:
-    - Change in output for `x` w.r.t to steps of GD: `dy/dt = sum_j..d dy/dwj * dwj/dt`
-    - = `sum_j..d dy/dwj * (-dL/dwj)`
-    - = `sum_j..d dy/dwj (-sum_i..m dL/dyi * dyi/dwj)`
-    - = `-sum_i..m dL/dyi * sum_j..d dy/dwj * dyi*dwj`
-    - = `-sum_i..m L'(yi, yi) K_f, w(t)(x, xi)`
-    - => `y = y0 - Integral_t sum_i..m L'(yi, yi) K_f,w(t) (x, xi) dt`
-    - …some normalization, … 
-  - Notes: `ai`, `b` depends on `x,` also connects to boosting, generally another way of looking at DNNs
+    - Change in output for `x` w.r.t to steps of GD: 
+    - `dy/dt = sum_j..d dy/dwj * dwj/dt` \| GSD'ed NN outputs change over time
+    - = `sum_j..d dy/dwj * (-dL/dwj)` \| Each wight changes according to Loss derivative
+    - = `sum_j..d dy/dwj (-sum_i..m dL/dyi * dyi/dwj)` \| Loss derivative over all data is sum over each data
+    - = `-sum_i..m dL/dyi * sum_j..d dy/dwj * dyi*dwj`\| Chain rule
+    - = `-sum_i..m L'(yi, yi) K_{f, w(t)}(x, xi)` \| re-arrange
+    - => `y = y0 - Integral_t sum_i..m L'(yi, yi) K_f,w(t) (x, xi) dt` \| output of NN `y=`
+    - …some normalization… 
+    - = `sum_i..m ai * K(x, xi) + b` \| output of Kernel machine
+  - Notes: `ai`, `b` depends on `x,`
+- Another way of looking at DNNs, also connects to boosting
+  - General statement: all learning methods will incorporate data
 
 ### [Kernels!](https://www.youtube.com/watch?v=y_RjsDHl5Y4)
 - Refresher on concepts:
